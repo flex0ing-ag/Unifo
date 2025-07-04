@@ -114,15 +114,14 @@ const Sidebar = () => {
           )}
         </button>
         {/* PROJECTS LIST */}
-        {showProjects &&
-          projects?.map((project) => (
-            <SidebarLink
-              key={project.id}
-              icon={Briefcase}
-              label={project.name}
-              href={`/projects/${project.id}`}
-            />
-          ))}
+        {showProjects && Array.isArray(projects) && projects.map((project) => (
+          <SidebarLink
+            key={project.id}
+            icon={Briefcase}
+            label={project.name}
+            href={`/projects/${project.id}`}
+          />
+        ))}
 
         {/* PRIORITIES LINKS */}
         <button

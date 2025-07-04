@@ -6,26 +6,26 @@ import Header from "@/components/Header";
 import {
   DataGrid,
   GridColDef,
+  GridToolbarContainer,
   GridToolbarExport,
   GridToolbarFilterButton,
 } from "@mui/x-data-grid";
-import { Box } from "@mui/material";
 import Image from "next/image";
 import { dataGridClassNames, dataGridSxStyles } from "@/lib/utils";
 
-// const CustomToolbar = () => (
-//   <GridToolbarContainer className="toolbar flex gap-2">
-//     <GridToolbarFilterButton />
-//     <GridToolbarExport />
-//   </GridToolbarContainer>
-// );
-
 const CustomToolbar = () => (
-  <Box className="toolbar flex gap-2">
+  <GridToolbarContainer className="toolbar flex gap-2">
     <GridToolbarFilterButton />
     <GridToolbarExport />
-  </Box>
+  </GridToolbarContainer>
 );
+
+// const CustomToolbar = () => (
+//   <Box className="toolbar flex gap-2">
+//     <GridToolbarFilterButton />
+//     <GridToolbarExport />
+//   </Box>
+// );
 
 const columns: GridColDef[] = [
   { field: "userId", headerName: "ID", width: 100 },
@@ -38,7 +38,7 @@ const columns: GridColDef[] = [
       <div className="flex h-full w-full items-center justify-center">
         <div className="h-9 w-9">
           <Image
-            src={`https://pm-s3-images.s3.us-east-2.amazonaws.com/${params.value}`}
+            src={`/${params.value}`}
             alt={params.row.username}
             width={100}
             height={50}

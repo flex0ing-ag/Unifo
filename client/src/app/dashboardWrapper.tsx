@@ -12,13 +12,24 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   );
   const isDarkMode = useAppSelector((state) => state.global.isDarkMode);
 
+  // useEffect(() => {
+  //   if (isDarkMode) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // });
+
   useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
+    if (typeof window !== "undefined") {
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
     }
-  });
+  }, [isDarkMode]);
+
 
   return (
     <div className="flex min-h-screen w-full bg-gray-50 text-gray-900">
