@@ -27,6 +27,10 @@ app.get("/", (req, res) => {
   res.send("This is home route");
 });
 
+app.get('/healthz', (req, res) => {
+  res.status(200).send('OK');
+});
+
 app.use("/projects", projectRoutes);
 app.use("/tasks", taskRoutes);
 app.use("/search", searchRoutes);
