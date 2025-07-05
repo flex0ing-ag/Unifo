@@ -50,16 +50,20 @@ cd Unifo
 ``` 
 
 #### 2. Install dependencies in both client and server:
+   ```bash
    cd client
    npm i
    cd ..
    cd server
    npm i
+   ```
 
 #### 3. Set up the database:
+   ```bash
    npx prisma generate
    npx prisma migrate dev --name init
    npm run seed
+   ```
 
 #### 4. Configure environment variables:
 
@@ -78,7 +82,7 @@ npm run dev
 cd client
 npm run dev
 ```
-Visit: http://localhost:3000
+**Visit**: http://localhost:3000
 
 
 ---
