@@ -36,7 +36,7 @@
 - [Node.js & npm](https://nodejs.org/)
 - [Git](https://git-scm.com/)
 - [PostgreSQL](https://www.postgresql.org/download/)
-- (Optional) [PgAdmin](https://www.pgadmin.org/download/)
+- [PgAdmin](https://www.pgadmin.org/download/)(Optional) 
 
 ---
 
