@@ -16,10 +16,12 @@
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/fs-extra": "^11.0.4",
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.10",
     "concurrently": "^9.2.0",
     "nodemon": "^3.1.10",
+    "prisma": "^6.11.1",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
@@ -31,7 +33,6 @@
     "dotenv": "^17.0.1",
     "express": "^5.1.0",
     "helmet": "^8.1.0",
-    "morgan": "^1.10.0",
-    "prisma": "^6.11.1"
+    "morgan": "^1.10.0"
   }
 }
