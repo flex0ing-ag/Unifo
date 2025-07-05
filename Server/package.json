@@ -2,14 +2,16 @@
   "name": "server",
   "version": "1.0.0",
   "main": "dist/src/index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rimraf dist && npx tsc",
-    "start": "npm run build && node dist/src/index.js",
-    "postinstall": "prisma generate",
-    "dev": "npm run build && concurrently \"npx tsc -w\" \"nodemon --exec ts-node src/index.ts\"",
-    "seed": "ts-node prisma/seed.ts"
-  },
+ "scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1",
+  "build": "rimraf dist && npx tsc",
+  "start": "node dist/src/index.js",
+  "dev": "concurrently \"npx tsc -w\" \"nodemon --exec ts-node src/index.ts\"",
+  "seed": "ts-node prisma/seed.ts",
+  "migrate": "npx prisma migrate deploy",
+  "postinstall": "npx prisma generate",
+  "render-build": "npm run migrate && npm run build"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
